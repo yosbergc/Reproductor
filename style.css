@@ -20,10 +20,11 @@ main {
 }
 .songImage {
     width: 100%;
+    max-width: 250px;
     border-radius: 20px;
     margin-bottom: 20px;
     height: 250px;
-    object-fit: contain;
+    object-fit: cover;
 }
 .songTitle {
     font-family: 'Inter', sans-serif;
@@ -40,31 +41,31 @@ main {
     color: #4D5562;
     margin-top: 5px;
 }
-.playerContainer .progress {
-    -webkit-appearance: none;
-    appearance: none;
+input[type='range'] {
+    overflow: hidden;
     width: 100%;
-    height: 5px;
-    border-radius: 5px;  
-    background: #ffffff;
-    outline-color: green;
-    cursor: pointer;
-}
-.playerContainer .progress::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 7px;
-    height: 7px;
-    border-radius: 50%; 
-    background: #04AA6D;
+    background-color: #ffffff;
+    border-radius: 20px;
 }
-.playerContainer .progress::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: #04AA6D;
+
+input[type='range']::-webkit-slider-runnable-track {
+    height: 6px;
+    -webkit-appearance: none;
+    color: #e70505;
+    margin-top: -1px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    width: 0px;
+    -webkit-appearance: none;
+    height: 10px;
     cursor: pointer;
-  }
+    background: #C93B76;
+    box-shadow: -300px 0 0 300px #C93B76;
+}
+
 .time {
     display: flex;
     justify-content: space-between;
@@ -85,6 +86,7 @@ main {
     background-color: #C93B76;
     margin: 0px 20px;
     border-radius: 50%;
+    padding: 5px;
 }
 .controls svg:hover {
     cursor: pointer;
