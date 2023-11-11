@@ -10,14 +10,14 @@ const songImage = document.querySelector('.songImage');
 const songs = [
     {   songName: "Lost in the City Lights",
         songAuthor: "Cosmo Sheldrake",
-        songLink: "forest-lullaby-110624.mp3",
+        songLink: "lost-in-city-lights-145038.mp3",
         songImage: "cover-1.png",
     }
 ,
     {
-        songName: "Second Song",
-        songAuthor: "Cosmo Sheldrake",
-        songLink: "lost-in-city-lights-145038.mp3",
+        songName: "Forest Lullaby",
+        songAuthor: "Lesfm",
+        songLink: "forest-lullaby-110624.mp3",
         songImage: "cover-2.png"
     }
 ]
