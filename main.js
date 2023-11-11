@@ -24,11 +24,21 @@ const songs = [
 let player = new Audio(songs[0].songLink);
 let currentSong = 0;
 let actualizarTiempo;
+progressBar.addEventListener("input", cambiarTiempo);
 playButton.addEventListener("click", reproducirCancion);
 nextButton.addEventListener("click", siguienteCancion);
 backButton.addEventListener("click", anteriorCancion);
 player.addEventListener('ended', matarActualizar);
 
+function cambiarTiempo(event) {
+    player.pause();
+    player.currentTime = event.target.value;
+    player.play().then(() => {
+        insertarDatosCancion();
+        actualizarTiempoActual();
+    })
+
+}
 function matarActualizar() {
     clearInterval(actualizarTiempo);
 }
